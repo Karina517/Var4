@@ -11,8 +11,8 @@ import com.bumptech.glide.Glide;
 
 public class ViewActivity extends AppCompatActivity {
 
-    TextView viewActivityPartyName;
-    TextView viewActivityPartyDescription;
+    TextView AvName;
+    TextView AVDetails;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,11 +23,11 @@ public class ViewActivity extends AppCompatActivity {
         String partyName = intent.getStringExtra("party_name");
         String partyDetails = intent.getStringExtra("party_details");
         String partyImageURL=intent.getStringExtra("party_imageURL");
-        viewActivityPartyName=findViewById(R.id.AVname);
-        viewActivityPartyDescription=findViewById(R.id.AVdetails);
+        AVName=findViewById(R.id.AVname);
+        AVDetails=findViewById(R.id.AVdetails);
         
-        viewActivityPartyDescription.setText(partyDetails);
-        viewActivityPartyName.setText(partyName);
+        AVdetails.setText(partyDetails);
+        AVName.setText(partyName);
         ImageView AVimage = findViewById(R.id.AVimage);
         Glide.with(this).load(partyImageURL).into(AVimage);
         
