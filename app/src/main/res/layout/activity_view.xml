@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/AVimage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_launcher_background"
+        android:contentDescription="@string/todo" />
+
+    <TextView
+        android:id="@+id/AVname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="400dp"
+        android:selectAllOnFocus="false"
+        android:shadowColor="#000000"
+        android:text="Name"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/AVimage" />
+
+    <TextView
+        android:id="@+id/AVdetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="24dp"
+        android:text="Details "
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/AVimage"
+        app:layout_constraintStart_toStartOf="@+id/AVimage"
+        app:layout_constraintTop_toBottomOf="@+id/AVname" />
+
+    <TextView
+        android:id="@+id/AVcome"
+        android:layout_width="293dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="200dp"
+        android:background="#E91E63"
+        android:singleLine="false"
+        android:soundEffectsEnabled="false"
+        android:text="Заходи"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constrainedHeight="false"
+        app:layout_constraintStart_toStartOf="@+id/AVimage"
+        app:layout_constraintTop_toBottomOf="@+id/AVdetails" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:adjustViewBounds="false"
+        app:layout_constraintEnd_toEndOf="@+id/AVimage"
+        app:layout_constraintTop_toTopOf="@+id/AVimage"
+        app:srcCompat="@android:drawable/ic_dialog_info" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="49dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/AVimage"
+        app:layout_constraintTop_toTopOf="@+id/AVimage"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
