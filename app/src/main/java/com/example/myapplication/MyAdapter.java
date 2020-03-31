@@ -15,7 +15,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.target.Target;
 
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
@@ -73,7 +72,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     class MyViewHolder extends RecyclerView.ViewHolder {
 
         TextView partyNameTV;
-        TextView partyLocationTV;
+        TextView partyAdresTV;
         TextView partyDateTV;
         TextView partyTimeTV;
         TextView partyDistTV;
@@ -84,7 +83,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             super(itemView);
 
             partyNameTV = itemView.findViewById(R.id.name);
-            partyLocationTV = itemView.findViewById(R.id.adres);
+            partyAdresTV = itemView.findViewById(R.id.adres);
             partyDateTV = itemView.findViewById(R.id.data);
             partyTimeTV = itemView.findViewById(R.id.time);
             partyDistTV = itemView.findViewById(R.id.dist);
@@ -95,16 +94,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
         public void bind(Party party) {
             partyNameTV.setText(party.name);
-            partyLocationTV.setText(party.adres);
+            partyAdresTV.setText(party.adres);
             partyDateTV.setText(party.data);
             partyTimeTV.setText(party.time);
             partyDistTV.setText(party.dist);
-        }
-
-
-        public Target partyIV() {
-            return null;
-
         }
     }
 }
